@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background-color: #f5f5f0; /* Light cream/off-white color */
+  color: #333333; /* Dark gray for the main text */
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; /* Default font */
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #333333; /* Dark gray for headings */
+  /* additional styling as needed */
+}
+
