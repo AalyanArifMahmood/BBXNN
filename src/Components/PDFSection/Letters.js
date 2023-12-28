@@ -46,15 +46,15 @@ class LettersToYou extends React.Component {
 
         this.pdfs = [
             { title: 'The First Attempt', path: '/PDFs/1.pdf' },
-            { title: 'Letter 2', path: '/PDFs/2.pdf' },
-            { title: 'Letter 3', path: '/PDFs/3.pdf' },
-            { title: 'Letter 4', path: '/PDFs/4.pdf' },
-            { title: 'Letter 1', path: '/PDFs/5.pdf' },
-            { title: 'Letter 2', path: '/PDFs/6.pdf' },
-            { title: 'Letter 1', path: '/PDFs/7.pdf' },
-            { title: 'Letter 2', path: '/PDFs/8.pdf' },
-            { title: 'Letter 1', path: '/PDFs/9.pdf' },
-            { title: 'Letter 2', path: '/PDFs/10.pdf' },
+            { title: 'Ah shit, my heart bled onto this piece of paper💜', path: '/PDFs/2.pdf' },
+            { title: 'A kiss under the snow', path: '/PDFs/3.pdf' },
+            { title: 'Mathematical Masterpiece', path: '/PDFs/4.pdf' },
+            { title: 'Smile my boy, it’s sunrise!', path: '/PDFs/5.pdf' },
+            { title: 'The confession💜', path: '/PDFs/6.pdf' },
+            { title: 'Ah, to be with you for a New Year Eve’s Kiss😘', path: '/PDFs/7.pdf' },
+            { title: 'I swear I couldn’t love you more than I do right now, and yet I know I will tomorrow ', path: '/PDFs/8.pdf' },
+            { title: 'Love is the one thing that transcends the dimensions of time and space', path: '/PDFs/9.pdf' },
+            { title: 'Half a year now, Half a decade some day', path: '/PDFs/10.pdf' },
         ];
     }
 
@@ -92,13 +92,20 @@ class LettersToYou extends React.Component {
         };
 
         const thumbnailContainerStyle = {
-            width: '150px', // Fixed width for thumbnails
+            width: '200px', // Fixed width for thumbnails
             marginRight: '15px', // Space between thumbnails
             display: 'inline-flex', // Inline-flex for horizontal layout
             flexDirection: 'column',
             alignItems: 'center', // Center align the contents
             textAlign: 'center',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
+        };
+
+        const thumbnailTextStyle = {
+            marginTop: '5px',
+            maxWidth: '100%', // Allow text to wrap within the container
+            overflow: 'hidden', // Hide text overflow
+            textOverflow: 'ellipsis', // Add ellipsis for overflowed text
         };
 
         const pdfStyle = {
@@ -176,7 +183,7 @@ class LettersToYou extends React.Component {
                                     <Page pageNumber={1} width={150} renderTextLayer={false} />
                                 </Document>
                             </div>
-                            <p style={{ marginTop: '5px' }}>{pdf.title}</p> {/* Ensure space for the title */}
+                            <p style={thumbnailTextStyle}>{pdf.title}</p> {/* Ensure space for the title */}
                         </div>
                     ))}
                 </div>
