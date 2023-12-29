@@ -241,6 +241,7 @@ class Pics extends React.Component {
             height: "auto",
             display: "block",
             margin: "0 auto",
+            borderRadius: "15px"
         };
 
         return (
