@@ -14,7 +14,7 @@ class OurStory extends React.Component {
         window.matchMedia("(min-width: 680px)").addEventListener('change', handler);
         setTimeout(() => {
             this.setState({ isVisible: true });
-        }, 1500);
+        }, 1000);
     }
 
     render() {
@@ -22,7 +22,7 @@ class OurStory extends React.Component {
             display: 'flex',
             flexDirection: this.state.matches ? 'row' : 'column',
             alignItems: 'flex-start',
-            justifyContent: this.state.matches ? 'center' : 'flex-start', // Align to the start for larger screens
+            justifyContent: this.state.matches ? 'center' : 'flex-start',
             padding: '20px',
             gap: '40px',
             marginLeft: this.state.matches ? '-5%' : '',
@@ -30,39 +30,31 @@ class OurStory extends React.Component {
             boxShadow: '0 8px 15px rgba(0, 0, 0, 0.2)'
         };
 
-        const shadowStyle = {
-            position: 'absolute',
-            bottom: '-15px', // Position shadow at the bottom
-            left: '0',
-            right: '0',
-            height: '15px',
-            boxShadow: '0 8px 15px rgba(0, 0, 0, 0.2)',
-            zIndex: -1, // Ensure the shadow is behind the content
-        };
 
         const imageStyle = {
             borderRadius: '15px',
-            width: this.state.matches ? '30%' : '70%', // Adjusted width for phone view
+            width: this.state.matches ? '30%' : '70%',
             height: 'auto',
-            marginBottom: this.state.matches ? '0' : '20px', // Margin at the bottom only in phone view
+            marginBottom: this.state.matches ? '0' : '20px',
         };
 
         const textStyle = {
-            width: this.state.matches ? '50%' : '100%', // Adjusted width for phone view
+            width: this.state.matches ? '50%' : '100%',
             fontFamily: '"Open Sans", sans-serif',
         };
 
         const headingStyle = {
             fontFamily: '"Playfair Display", serif',
-            fontSize: '2rem',
+            fontSize: '2.5rem',
             marginBottom: '20px',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
         };
 
         return (
-            <div className={this.state.isVisible ? 'fade-in' : 'hidden'}>
+            <div style={{marginBottom: "-8px"}} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
             <div style={containerStyle}>
                 {this.state.matches && (
-                    <img src="/StoryPic.png" alt="Our Story" style={imageStyle} />
+                    <img src={process.env.PUBLIC_URL + "/StoryPic.png"} alt="Our Story" style={imageStyle} />
                 )}
                 <div style={textStyle}>
                     <h2 style={headingStyle}>Our Story</h2>
@@ -82,7 +74,7 @@ class OurStory extends React.Component {
                     </p>
                 </div>
                 {!this.state.matches && (
-                    <img src="/StoryPic.png" alt="Our Story" style={imageStyle} />
+                    <img src={process.env.PUBLIC_URL + "/StoryPic.png"} alt="Our Story" style={imageStyle} />
                 )}
                 {/*<div style={shadowStyle}></div>*/}
             </div>
