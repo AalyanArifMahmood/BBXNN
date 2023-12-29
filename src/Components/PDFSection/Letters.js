@@ -249,18 +249,18 @@ class LettersToYou extends React.Component {
                         <div style={finalPopupStyle}>
                             <div style={stickyBarStyle}>
                                 <span style={titleStyle}>{this.state.selectedPdfTitle}</span>
-                                <span style={closeButtonStyle} onClick={this.closePopup}>
-                            &times;
-                        </span>
+                                <span style={closeButtonStyle} onClick={this.closePopup}>&times;</span>
                             </div>
-                            <Document file={this.state.selectedPdf} onLoadSuccess={this.onLoadSuccess}>
+                            <Document
+                                file={this.state.selectedPdf}
+                                onLoadSuccess={this.onDocumentLoadSuccess}
+                                loading=""
+                            >
                                 {Array.from(new Array(this.state.numPages), (el, index) => (
                                     <div key={index} style={pageStyle}>
                                         <Page
-                                            key={index}
                                             pageNumber={index + 1}
                                             width={window.innerWidth <= 768 ? 300 : window.innerWidth * 0.5}
-                                            height={200}
                                             renderTextLayer={false}
                                         />
                                     </div>
