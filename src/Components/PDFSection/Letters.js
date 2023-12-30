@@ -50,6 +50,9 @@ class LettersToYou extends React.Component {
             { title: 'I swear I couldn’t love you more than I do right now, and yet I know I will tomorrow ', path: process.env.PUBLIC_URL+'/PDFs/8.pdf' },
             { title: 'Love is the one thing that transcends the dimensions of time and space', path: process.env.PUBLIC_URL+'/PDFs/9.pdf' },
             { title: 'Half a year now, Half a decade some day', path: process.env.PUBLIC_URL+'/PDFs/10.pdf' },
+            { title: 'To my Nib Nib', path: process.env.PUBLIC_URL+'/PDFs/11.pdf' },
+            { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' }
+
         ];
     }
 
