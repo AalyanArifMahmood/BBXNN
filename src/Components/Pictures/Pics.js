@@ -110,8 +110,28 @@ class Pics extends React.Component {
             },
             {
                 title: "Pouty little demon👹",
-                description: "When my Nib Nib pouts, I can never resist her adorable and sassy little facem, and she always ends up getting what she wants. She is the cutest little demon out there, and I lover her very, very much😍💜🥰",
+                description: "When my Nib Nib pouts, I can never resist her adorable and sassy little facem, and she always ends up getting what she wants. She is the cutest little demon out there, and I love her very, very much😍💜🥰",
                 path: process.env.PUBLIC_URL + "/Pics/11.png",
+            },
+            {
+                title: "Speepy Bub Bub",
+                description: "Here, Bub Bub can be found in his natural sleeping position: cuddling Winnie The Pooh! He is sleeping in peace, dreaming about waking up and seeing his Nib Nib😍",
+                path: process.env.PUBLIC_URL + "/Pics/12.png",
+            },
+            {
+                title: "Hand in hand",
+                description: "This picture is a vow, that no matter what the situaiton, we will always walk out, with your hand in mine. Hold my hand, and never let go💜💜 Also, ignore the bowl of yummy ramen🤣",
+                path: process.env.PUBLIC_URL + "/Pics/13.png",
+            },
+            {
+                title: "An honor to be in the presence of such beauty",
+                description: "You looked so damn pretty on Diwali, I was completely in awe. It's like the color black was made for you. You looked stunning, and to be with you in this picture, it's an honor, meri jaan. I am so in love with you.🥰😍",
+                path: process.env.PUBLIC_URL + "/Pics/14.png",
+            },
+            {
+                title: "KOALA🐨",
+                description: "I love that feeling in the morning when we wake up next to each other, and I can feel you. Your skin. I absolutely love the feeling when I cuddle you and hold you, and when we do Koala🥰. I love your shoulders, your back. Your skin. I love everything about you.😍",
+                path: process.env.PUBLIC_URL + "/Pics/15.png",
             },
         ];
 
