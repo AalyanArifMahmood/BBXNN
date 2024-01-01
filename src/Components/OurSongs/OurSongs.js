@@ -111,14 +111,17 @@ class OurSongs extends Component {
         })
             .then(response => {
                 if (response.status === 401) {
+                    console.log("token expired")
                     // Token expired
                     this.props.navigate('/spotify-auth');
                 } else {
+                    console.log("response json here")
                     return response.json();
                 }
             })
             .then(data => {
                 if (data) {
+                    console.log("song received")
                     this.setState(prevState => ({
                         songs: [...prevState.songs, data]
                     }));
