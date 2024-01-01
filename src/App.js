@@ -10,12 +10,13 @@ import OurSongs from "./Components/OurSongs/OurSongs";
 import SpotifyAuth from "./Components/OurSongs/SpotifyAuth";
 import ourSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
+import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/spotify-auth" element={<SpotifyAuth />} />
+                <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
                     <>
                         <Heading />
