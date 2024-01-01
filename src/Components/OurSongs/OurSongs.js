@@ -100,7 +100,7 @@ class OurSongs extends Component {
         } else {
             // Redirect to the authentication page or component
             // Adjust this to match your routing setup
-            this.props.history.push('/spotify-auth');
+            this.props.navigate('/spotify-auth');
         }
     }
 
