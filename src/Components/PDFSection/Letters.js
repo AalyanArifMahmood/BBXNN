@@ -51,7 +51,9 @@ class LettersToYou extends React.Component {
             { title: 'Love is the one thing that transcends the dimensions of time and space', path: process.env.PUBLIC_URL+'/PDFs/9.pdf' },
             { title: 'Half a year now, Half a decade some day', path: process.env.PUBLIC_URL+'/PDFs/10.pdf' },
             { title: 'To my Nib Nib', path: process.env.PUBLIC_URL+'/PDFs/11.pdf' },
-            { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' }
+            { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' },
+            { title: 'New Year, New Adventure', path: process.env.PUBLIC_URL+'/PDFs/13.pdf' }
+
 
         ];
     }

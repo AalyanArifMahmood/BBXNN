@@ -133,6 +133,21 @@ class Pics extends React.Component {
                 description: "I love that feeling in the morning when we wake up next to each other, and I can feel you. Your skin. I absolutely love the feeling when I cuddle you and hold you, and when we do Koala🥰. I love your shoulders, your back. Your skin. I love everything about you.😍",
                 path: process.env.PUBLIC_URL + "/Pics/15.JPG",
             },
+            {
+                title: "The Nib Nib and Bub Bub Show",
+                description: "I told you kust how much I love thisd photo. It is so cute and silly, and we actually look like the cover of a sitcom. I have this picture saved in my favorites and this is the one I am going to frame in my office, because babe, i think this is the picture that defines us just perfectly, and captures the essence of our relationship: cute, and siwwy💜😍",
+                path: process.env.PUBLIC_URL + "/Pics/16.JPG",
+            },
+            {
+                title: "Wholesome and 👀👀🥵🥵",
+                description: "This picture was taken the day after we 👀🥵. It is a treasured memory for me, because it showed that being intimate does not need to just stay in the physical sphere, and that emotions are a big part of it too. The room was filled with move before, during, and after it, and I will never forget how special it felt baby. I love you💜🥰",
+                path: process.env.PUBLIC_URL + "/Pics/17.png",
+            },
+            {
+                title: "'New Years' Kiss",
+                description: "Since we haven't actually gotten to celebrate New Year's together, I have always regarded this as our new Year's kiss. This picture is special to me. It's important. It reminds me of your love, when I am at my lowest. Some day, when we can celebrate New Year's together, I want to recreate this one with you. That, will be the proof, that love overlooked all difficulties and differences. That will be proof, that we made it.💜💜",
+                path: process.env.PUBLIC_URL + "/Pics/18.JPG",
+            },
         ];
 
         const picsContainerStyle = {
