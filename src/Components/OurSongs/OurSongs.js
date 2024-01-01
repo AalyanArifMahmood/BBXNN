@@ -282,7 +282,7 @@ class OurSongs extends Component {
         };
         return (
             <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
-                <h2 style={headingStyle}>Our Songs</h2>
+                <h2 style={headingStyle}>Our Songs ga</h2>
                 <h2 style={headingStyle2}>This is some of the music you and I share together. Each song has some significance regarding our relationship &#129392;</h2>
                 <div style={lineContainerStyle}>
                     <div style={lineStyle}></div>
