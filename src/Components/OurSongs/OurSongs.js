@@ -64,7 +64,7 @@ class OurSongs extends Component {
 
         if (!token || new Date().getTime() > parseInt(expiryTime)) {
             // Token is expired or not set, redirect to auth
-            this.props.history.push('/spotify-auth');
+            this.props.navigate('/spotify-auth');
         } else {
             // Token is valid, proceed with fetching songs
             this.setState({ token }, this.fetchSongs);

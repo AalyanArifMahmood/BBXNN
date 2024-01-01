@@ -18,7 +18,7 @@ class SpotifyAuth extends Component {
             const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
             localStorage.setItem('spotifyToken', token);
             localStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
-            this.props.navigate('/your-main-route');
+            this.props.navigate('/');
         } else {
             this.authenticateSpotify();
         }
