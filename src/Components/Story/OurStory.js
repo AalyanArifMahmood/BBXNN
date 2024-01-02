@@ -58,7 +58,7 @@ class OurStory extends React.Component {
 
         const imageStyle = {
             borderRadius: '16px',
-            width: this.state.matches ? '30%' : '90%',
+            width: this.state.matches ? '30%' : '100%',
             height: 'auto',
             marginBottom: this.state.matches ? '0' : '20px',
         };
