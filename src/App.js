@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import {BrowserRouter as Router, Routes, Route, Navigate, useNavigate} from 'react-router-dom';
 import './App.css';
 import Heading from "./Components/Heading/Heading";
 import OurStory from "./Components/Story/OurStory";
@@ -9,9 +9,28 @@ import Pics from "./Components/Pictures/Pics";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
 
+function RedirectIfNotAuthenticated() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const token = sessionStorage.getItem('spotifyToken');
+        const expiryTime = sessionStorage.getItem('spotifyTokenExpiry');
+        const isTokenValid = token && new Date().getTime() < parseInt(expiryTime);
+
+        if (!isTokenValid) {
+            navigate('/spotify-auth');
+        }
+    }, [navigate]);
+
+    // Return null because this component does not render anything
+    return null;
+}
+
 function App() {
     return (
         <Router>
+            {/* Include the RedirectIfNotAuthenticated component here */}
+            <RedirectIfNotAuthenticated />
             <Routes>
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
