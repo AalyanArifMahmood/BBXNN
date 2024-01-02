@@ -244,7 +244,7 @@ class OurSongs extends Component {
 
         const popupContentStyle = {
             backgroundColor: "#191414",
-            border: "1px solid #191414",
+            border: "1px solid #1DB954",
             borderRadius: "10px",
             zIndex: 1002,
             position: "fixed",
