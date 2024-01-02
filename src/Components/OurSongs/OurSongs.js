@@ -58,8 +58,8 @@ class OurSongs extends Component {
         const mediaQuery = window.matchMedia("(max-width: 680px)");
         const handler = (e) => this.setState({ isPhoneScreen: e.matches });
         mediaQuery.addEventListener('change', handler);
-        const token = localStorage.getItem('spotifyToken');
-        const expiryTime = localStorage.getItem('spotifyTokenExpiry');
+        const token = sessionStorage.getItem('spotifyToken');
+        const expiryTime = sessionStorage.getItem('spotifyTokenExpiry');
 
         if (!token && !expiryTime) {
             console.log("reached no token or expiry")
@@ -68,8 +68,8 @@ class OurSongs extends Component {
         } else if (!token || new Date().getTime() > parseInt(expiryTime)) {
             console.log("reached expired token")
             // Token is expired or not set, remove it and redirect to auth
-            localStorage.removeItem("spotifyTokenExpiry");
-            localStorage.removeItem("spotifyToken");
+            sessionStorage.removeItem("spotifyTokenExpiry");
+            sessionStorage.removeItem("spotifyToken");
             this.props.navigate('/spotify-auth');
         } else {
             // Token is valid, proceed with fetching songs
@@ -93,8 +93,8 @@ class OurSongs extends Component {
             console.log("got new token")
             if (newToken) {
                 const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
-                localStorage.setItem('spotifyToken', newToken);
-                localStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
+                sessionStorage.setItem('spotifyToken', newToken);
+                sessionStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
                 this.setState({ token: newToken }, this.fetchSongs);
                 this.props.navigate('/');
             }
