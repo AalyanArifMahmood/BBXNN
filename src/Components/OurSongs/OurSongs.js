@@ -118,8 +118,8 @@ class OurSongs extends Component {
             'https://open.spotify.com/track/395gJWcJQK0C3GJfHAn7f6?si=ed23d528c57243c2',
             'https://open.spotify.com/track/4uK0M8AI6gyFmyzUneQpbi?si=32b9bc1a1b594b75',
             'https://open.spotify.com/track/4iFPsNzNV7V9KJgcOX7TEO?si=642fee5a523047e5',
-
-            // Add more links as needed
+            'https://open.spotify.com/track/69vToJ9BMbbLlFZo7k7A7B?si=28ef1e652be94888',
+            'https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC?si=718884886aa44be0'
         ];
 
         const trackIdsSet = new Set(spotifyLinks.map(link =>
