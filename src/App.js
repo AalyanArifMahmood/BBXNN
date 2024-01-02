@@ -13,7 +13,7 @@ import OurSongs from "./Components/OurSongs/OurSongs";
 
 function App() {
     return (
-        <Router>
+        <Router basename="/BBXNN"> {/* Replace "/my-app" with your actual GitHub Pages path */}
             <Routes>
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
