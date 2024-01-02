@@ -13,10 +13,12 @@ function RedirectIfNotAuthenticated() {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log("Iy hit this part")
         const token = sessionStorage.getItem('spotifyToken');
         const expiryTime = sessionStorage.getItem('spotifyTokenExpiry');
         const isTokenValid = token && new Date().getTime() < parseInt(expiryTime);
-
+        console.log(token)
+        console.log(isTokenValid)
         if (!isTokenValid) {
             navigate('/spotify-auth');
         }
@@ -29,7 +31,6 @@ function RedirectIfNotAuthenticated() {
 function App() {
     return (
         <Router>
-            {/* Include the RedirectIfNotAuthenticated component here */}
             <RedirectIfNotAuthenticated />
             <Routes>
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />

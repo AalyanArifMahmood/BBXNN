@@ -29,9 +29,9 @@ class SpotifyAuth extends Component {
 
     authenticateSpotify() {
         const authEndpoint = 'https://accounts.spotify.com/authorize';
-        const clientId = '5bda10aa895846d1937a499053abe427'; // Replace with your Spotify Client ID
-        const redirectUri = 'https://www.bubbiexnibbie.com'; // Adjust as necessary
-        const scopes = []; // Add scopes here if needed
+        const clientId = '5bda10aa895846d1937a499053abe427';
+        const redirectUri = 'https://www.bubbiexnibbie.com';
+        const scopes = [];
         window.location.href = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join('%20')}&response_type=token&show_dialog=true`;
     }
 
