@@ -41,7 +41,7 @@ function App() {
                         <Pics />
                         <Letters />
                         <OurSongsWrapper />
-                        <Footer />
+                        {/*<Footer />*/}
                     </>
                 } />
                 <Route path="*" element={<Navigate to="/" replace />} />
