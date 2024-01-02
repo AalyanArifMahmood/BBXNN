@@ -87,7 +87,9 @@ class Heading extends React.Component {
                         )}
                         <div style={{ ...lineContainerStyle, bottom: '20px' }}>
                             <div style={lineStyle}></div>
-                            <span style={heartStyle}>&hearts;</span>
+                            <span style={heartStyle}>
+                                <FontAwesomeIcon icon={faHeart} />
+                            </span>
                             <div style={lineStyle}></div>
                         </div>
                     </div>
