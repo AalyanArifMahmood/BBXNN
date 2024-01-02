@@ -5,7 +5,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 
 const headingContainerStyle = {
-    background: 'linear-gradient(to right, white, #f0f0f0)',
+    background: 'linear-gradient(to right, white, #d3d3d3)',
     textAlign: 'center',
     padding: '60px 0',
     position: 'relative',
