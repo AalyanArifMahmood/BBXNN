@@ -60,7 +60,7 @@ class OurStory extends React.Component {
             borderRadius: '16px',
             width: this.state.matches ? '30%' : '100%',
 
-            height: this.state.matches ? 'auto': '100%',
+            height: this.state.matches ? 'auto': '90%',
             marginBottom: this.state.matches ? '0' : '20px',
         };
 
