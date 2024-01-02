@@ -8,8 +8,6 @@ import Footer from "./Components/Footer";
 import Pics from "./Components/Pictures/Pics";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
-import SpotifyAuth from "./Components/OurSongs/SpotifyAuth";
-import OurSongs from "./Components/OurSongs/OurSongs";
 
 function App() {
     return (
