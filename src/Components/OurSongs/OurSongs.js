@@ -48,6 +48,7 @@ class OurSongs extends Component {
 
 
     fetchSongs = () => {
+        this.setState({ songs: [] });
         const { trackIds } = this.state;
         trackIds.forEach(trackId => this.fetchSong(trackId));
     }
