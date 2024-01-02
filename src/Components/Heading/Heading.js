@@ -1,5 +1,8 @@
 import React from 'react';
 import '../../CSS/Heading.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+
 
 const headingContainerStyle = {
     background: 'linear-gradient(to right, white, #f0f0f0)',
@@ -66,7 +69,10 @@ class Heading extends React.Component {
                     <div>
                         <div style={{ ...lineContainerStyle, top: '20px' }}>
                             <div style={lineStyle}></div>
-                            <span style={heartStyle}>&hearts;</span>
+                            <span style={heartStyle}>
+                                <FontAwesomeIcon icon={faHeart} />
+                            </span>
+
                             <div style={lineStyle}></div>
                         </div>
                         {this.state.matches && (

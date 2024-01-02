@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 const lineContainerStyle = {
     position: 'absolute',
@@ -324,7 +326,9 @@ class OurSongs extends Component {
                 <h2 style={headingStyle2}>This is some of the music you and I share together. Each song has some significance regarding our relationship &#129392;</h2>
                 <div style={lineContainerStyle}>
                     <div style={lineStyle}></div>
-                    <span style={heartStyle}>&hearts;</span>
+                    <span style={heartStyle}>
+                        <FontAwesomeIcon icon={faHeart} />
+                    </span>
                     <div style={lineStyle}></div>
                 </div>
                 <div style={picsContainerStyle}>

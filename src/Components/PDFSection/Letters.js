@@ -1,5 +1,7 @@
 import React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faHeart} from "@fortawesome/free-solid-svg-icons";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -231,7 +233,9 @@ class LettersToYou extends React.Component {
                 <h2 style={headingStyle2}>This is a collection of all the letters I have written to you. I filled all of them with love, all the love I have for you &#128525;</h2>
                 <div style={lineContainerStyle}>
                     <div style={lineStyle}></div>
-                    <span style={heartStyle}>&hearts;</span>
+                    <span style={heartStyle}>
+                                <FontAwesomeIcon icon={faHeart} />
+                            </span>
                     <div style={lineStyle}></div>
                 </div>
                 <div style={pdfContainerStyle}>
