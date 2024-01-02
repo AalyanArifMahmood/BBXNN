@@ -179,7 +179,7 @@ class LettersToYou extends React.Component {
         };
 
         const componentContainerStyle = {
-            backgroundColor: '#cecec5',
+            background: 'linear-gradient(to right, #cecec5, #a8b0ce)',
             padding: '20px',
             paddingBottom: "5%",
             borderRadius: '8px',

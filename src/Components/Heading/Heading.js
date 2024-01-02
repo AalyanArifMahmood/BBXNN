@@ -2,13 +2,17 @@ import React from 'react';
 import '../../CSS/Heading.css'
 
 const headingContainerStyle = {
-    backgroundColor: 'white',
+    background: 'linear-gradient(to right, white, #f0f0f0)',
     textAlign: 'center',
     padding: '60px 0',
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    borderRadius: '8px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    marginBottom: '-8px',
+    zIndex: 2,
 };
 
 const headingStyle = {
@@ -57,9 +61,8 @@ class Heading extends React.Component {
 
     render() {
         return (
-            <div className={this.state.isVisible ? 'fade-in' : 'hidden'} style={{ boxShadow: '0 8px 15px rgba(0, 0, 0, 0.2)' }}>
-                <div style={headingContainerStyle}>
-                    <img src={process.env.PUBLIC_URL + "/Bub.jpeg"} alt="Bub" style={{ maxWidth: '100px', margin: '0 20px' }} /> {/* Adjust size and path */}
+            <div className={this.state.isVisible ? 'fade-in' : 'hidden'} style={headingContainerStyle}>
+                    <img src={process.env.PUBLIC_URL + "/Bub.png"} alt="Bub" style={{ maxWidth: '100px', margin: '0 20px' }} /> {/* Adjust size and path */}
                     <div>
                         <div style={{ ...lineContainerStyle, top: '20px' }}>
                             <div style={lineStyle}></div>
@@ -82,8 +85,7 @@ class Heading extends React.Component {
                             <div style={lineStyle}></div>
                         </div>
                     </div>
-                    <img src={process.env.PUBLIC_URL + "/Nib.jpeg"} alt="Nib" style={{ maxWidth: '100px', margin: '0 20px' }} /> {/* Adjust size and path */}
-                </div>
+                    <img src={process.env.PUBLIC_URL + "/Nib.png"} alt="Nib" style={{ maxWidth: '100px', margin: '0 20px' }} /> {/* Adjust size and path */}
             </div>
         );
     }

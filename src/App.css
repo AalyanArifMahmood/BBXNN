@@ -38,7 +38,7 @@
 }
 
 body {
-  background-color: #f5f5f0; /* Light cream/off-white color */
+  background-color: #FFFFFF; /* Light cream/off-white color */
   color: #333333; /* Dark gray for the main text */
   margin: 0;
   padding: 0;
@@ -51,4 +51,53 @@ h1, h2, h3 {
   color: #333333; /* Dark gray for headings */
   /* additional styling as needed */
 }
+
+
+audio {
+  width: 100%;
+}
+
+/* Chrome, Safari, Edge */
+audio::-webkit-media-controls-panel {
+  background-color: #333333;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+audio::-webkit-media-controls-timeline {
+  background-color: #333333; /* Default background color */
+}
+
+audio::-webkit-media-controls-timeline-container {
+  background-color: #333333;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-fullscreen-button,
+audio::-webkit-media-controls-playback-rate-button,
+audio::-webkit-media-controls-download-button, /* If such a pseudo-element exists */
+audio::-webkit-media-controls-menu-button { /* Targeting the options/menu button */
+  filter: invert(1); /* Attempt to make buttons white */
+}
+
+audio::-webkit-media-controls-played { /* Progress bar */
+  background-color: green;
+}
+
+/* Firefox */
+audio::-moz-range-track { /* Full track */
+  background-color: #333333;
+}
+
+audio::-moz-range-progress { /* Progress bar */
+  background-color: green;
+}
+
+
+
 

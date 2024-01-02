@@ -64,19 +64,34 @@ class OurStory extends React.Component {
         };
 
         const textStyle = {
+            color:"#ffffff",
             width: this.state.matches ? '50%' : '100%',
             fontFamily: '"Open Sans", sans-serif',
         };
 
         const headingStyle = {
+            color:"#ffffff",
             fontFamily: '"Playfair Display", serif',
             fontSize: '2.5rem',
             marginBottom: '20px',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
         };
 
+        const componentContainerStyle = {
+            background: 'linear-gradient(to right, #89CFF0, #003366)',
+            borderRadius: '8px',
+            margin: '20px 0',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+            marginBottom: '-8px',
+            position: 'relative',
+            zIndex: 2,
+            backgroundColor: 'white',
+            display: 'flex',
+            justifyContent: 'space-between',
+        };
+
         return (
-            <div style={{marginBottom: "-8px"}} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
+            <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
             <div style={containerStyle}>
                 {this.state.matches && (
                     <img src={process.env.PUBLIC_URL + "/StoryPic.png"} alt="Our Story" style={imageStyle} />

@@ -17,7 +17,7 @@ const lineStyle = {
 };
 
 const heartStyle = {
-    color: '#4F42B5',
+    color: '#FFFFFF',
     fontSize: '1.5rem',
 };
 
@@ -260,9 +260,8 @@ class Pics extends React.Component {
         };
 
         const componentContainerStyle = {
-            backgroundColor: '#e5e5db',
+            background: 'linear-gradient(to right, #e5e5db, #d2b48c)', // Gradient from light beige to tan
             padding: '20px',
-            paddingBottom: "5%",
             borderRadius: '8px',
             margin: '20px 0',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -270,6 +269,7 @@ class Pics extends React.Component {
             position: 'relative',
             zIndex: 2,
         };
+
 
         const responsiveImageStyle = {
             maxWidth: "100%",

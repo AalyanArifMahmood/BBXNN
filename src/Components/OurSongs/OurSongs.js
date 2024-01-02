@@ -10,14 +10,14 @@ const lineContainerStyle = {
 };
 
 const lineStyle = {
-    borderBottom: '1px solid #333333',
+    borderBottom: '1px solid #FFFFFF',
     flexGrow: 1,
     marginTop: '20px',
-    margin: '0 10px',
+    margin: '0 10px'
 };
 
 const heartStyle = {
-    color: '#4F42B5',
+    color: '#1DB954',
     fontSize: '1.5rem',
 };
 
@@ -191,7 +191,8 @@ class OurSongs extends Component {
             alignItems: "center",
             border: "1px solid #ccc",
             borderRadius: "8px",
-            backgroundColor: "#f8f8f8",
+            backgroundColor: "#333333",
+            borderColor: "#222222",
             padding: "10px 20px",
             margin: "0 auto",
             marginTop: "50px",
@@ -205,9 +206,11 @@ class OurSongs extends Component {
             flexDirection: 'column',
             alignItems: 'center',
             textAlign: 'center',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.5)',
             borderRadius: "15px",
-            overflow: "hidden"
+            overflow: "hidden",
+            backgroundColor:"#1e1818",
+            borderColor: ""
         };
 
         const thumbnailImageStyle = {
@@ -222,7 +225,8 @@ class OurSongs extends Component {
             maxWidth: "80%",
             overflow: "hidden",
             textOverflow: "ellipsis",
-            fontSize: this.state.isPhoneScreen ? "1rem" : "1rem"
+            fontSize: this.state.isPhoneScreen ? "1rem" : "1rem",
+            color:"#FFFFFF"
         };
 
         const popupStyle = {
@@ -233,12 +237,12 @@ class OurSongs extends Component {
             width: "100%",
             height: "100%",
             background: "rgba(0, 0, 0, 0.5)",
-            zIndex: 1001,
+            zIndex: 1001
         };
 
         const popupContentStyle = {
-            backgroundColor: "white",
-            border: "1px solid #ccc",
+            backgroundColor: "#191414",
+            border: "1px solid #191414",
             borderRadius: "10px",
             zIndex: 1002,
             position: "fixed",
@@ -279,7 +283,8 @@ class OurSongs extends Component {
             fontSize: '2.5rem',
             textAlign: 'center',
             marginBottom: '20px',
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            color: "#FFFFFF"
         };
 
         const headingStyle2 = {
@@ -290,10 +295,11 @@ class OurSongs extends Component {
             marginBottom: '30px',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             margin: '0 auto',
+            color: "#FFFFFF"
         };
 
         const componentContainerStyle = {
-            backgroundColor: '#e5e5db',
+            background: 'linear-gradient(to right, #191414, #323232)', // Gradient from #191414 to a slightly lighter shade
             padding: '20px',
             paddingBottom: "5%",
             borderRadius: '8px',
@@ -303,6 +309,7 @@ class OurSongs extends Component {
             position: 'relative',
             zIndex: 2,
         };
+
 
         const responsiveImageStyle = {
             maxWidth: "100%",
@@ -350,8 +357,8 @@ class OurSongs extends Component {
                                 alt={this.state.selectedSong.name}
                                 style={responsiveImageStyle}
                             />
-                            <h2 style={{textAlign:"center", fontWeight: "bold"}}>{this.state.selectedSong.name}</h2>
-                            <p style={{textAlign: "center", color: "gray", marginTop: "-15px"}}>{this.state.selectedSong.artists.map(artist => artist.name).join(", ")}</p>
+                            <h2 style={{textAlign:"center", fontWeight: "bold", color: "#FFFFFF"}}>{this.state.selectedSong.name}</h2>
+                            <p style={{textAlign: "center", color: "#BBBBBB", marginTop: "-15px"}}>{this.state.selectedSong.artists.map(artist => artist.name).join(", ")}</p>
                             {this.state.selectedSong.preview_url && (
                                 <div>
                                     <audio
