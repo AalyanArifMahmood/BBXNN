@@ -147,9 +147,15 @@ class OurSongs extends Component {
             })
             .then(data => {
                 if (data) {
-                    this.setState(prevState => ({
-                        songs: [...prevState.songs, data]
-                    }));
+                    this.setState(prevState => {
+                        // Check if the song is already in the state
+                        if (prevState.songs.some(song => song.id === data.id)) {
+                            return prevState; // Return the existing state if duplicate
+                        }
+                        return {
+                            songs: [...prevState.songs, data] // Add new song
+                        };
+                    });
                 }
             })
             .catch(error => {
