@@ -11,7 +11,7 @@ import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
 
 function App() {
     return (
-        <Router> {/* Replace "/my-app" with your actual GitHub Pages path */}
+        <Router>
             <Routes>
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
