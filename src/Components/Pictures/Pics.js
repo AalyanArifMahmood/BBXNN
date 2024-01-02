@@ -112,7 +112,7 @@ class Pics extends React.Component {
             },
             {
                 title: "Pouty little demon👹",
-                description: "When my Nib Nib pouts, I can never resist her adorable and sassy little facem, and she always ends up getting what she wants. She is the cutest little demon out there, and I love her very, very much😍💜🥰",
+                description: "When my Nib Nib pouts, I can never resist her adorable and sassy little face, and she always ends up getting what she wants. She is the cutest little demon out there, and I love her very, very much😍💜🥰",
                 path: process.env.PUBLIC_URL + "/Pics/11.png",
             },
             {
