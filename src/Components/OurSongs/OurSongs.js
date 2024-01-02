@@ -62,10 +62,12 @@ class OurSongs extends Component {
         const expiryTime = sessionStorage.getItem('spotifyTokenExpiry');
 
         if (!token && !expiryTime) {
-            console.log("reached no token or expiry");
+            console.log("reached no token or expiry")
+            // Token and expiry are missing, redirect to auth
             this.props.navigate('/spotify-auth');
         } else if (!token || new Date().getTime() > parseInt(expiryTime)) {
-            console.log("reached expired token");
+            console.log("reached expired token")
+            // Token is expired or not set, remove it and redirect to auth
             sessionStorage.removeItem("spotifyTokenExpiry");
             sessionStorage.removeItem("spotifyToken");
             this.props.navigate('/spotify-auth');
