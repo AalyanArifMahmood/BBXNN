@@ -58,10 +58,11 @@ class OurStory extends React.Component {
 
         const imageStyle = {
             borderRadius: '16px',
-            width: this.state.matches ? '30%' : '80%',
+            width: this.state.matches ? '30%' : '90%',
             height: 'auto',
             marginBottom: this.state.matches ? '0' : '20px',
         };
+
 
         const textStyle = {
             color:"#ffffff",
@@ -96,6 +97,7 @@ class OurStory extends React.Component {
                 {this.state.matches && (
                     <img src={process.env.PUBLIC_URL + "/StoryPic.png"} alt="Our Story" style={imageStyle} />
                 )}
+
                 <div style={textStyle}>
                     <h2 style={headingStyle}>Our Story</h2>
                     <p style={{fontSize: "16px"}}>
