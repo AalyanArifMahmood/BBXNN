@@ -225,7 +225,6 @@ class LettersToYou extends React.Component {
         document.body.style.overflow = this.state.selectedPdf ? 'hidden' : 'initial';
         const isPhoneScreen = window.innerWidth <= 768;
         const finalPopupStyle = isPhoneScreen ? phonePopupStyle : popupStyle;
-        console.log(this.state.selectedPdf);
         return (
             <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
                 <h2 style={headingStyle}>Letters To You</h2>

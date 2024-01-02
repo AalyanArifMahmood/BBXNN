@@ -51,7 +51,6 @@ class OurSongs extends Component {
         const { trackIds } = this.state;
         trackIds.forEach(trackId => this.fetchSong(trackId));
     }
-
     componentDidMount() {
         setTimeout(() => {
             this.setState({ isVisible: true });
@@ -62,47 +61,75 @@ class OurSongs extends Component {
         const token = localStorage.getItem('spotifyToken');
         const expiryTime = localStorage.getItem('spotifyTokenExpiry');
 
-        if (!token || new Date().getTime() > parseInt(expiryTime)) {
-            // Token is expired or not set, redirect to auth
+        if (!token && !expiryTime) {
+            console.log("reached no token or expiry")
+            // Token and expiry are missing, redirect to auth
+            this.props.navigate('/spotify-auth');
+        } else if (!token || new Date().getTime() > parseInt(expiryTime)) {
+            console.log("reached expired token")
+            // Token is expired or not set, remove it and redirect to auth
+            localStorage.removeItem("spotifyTokenExpiry");
+            localStorage.removeItem("spotifyToken");
             this.props.navigate('/spotify-auth');
         } else {
             // Token is valid, proceed with fetching songs
             this.setState({ token }, this.fetchSongs);
         }
 
-        if (token) {
-            this.setState({ token }, () => {
-                // Example list of Spotify track links
-                const spotifyLinks = [
-                    'https://open.spotify.com/track/6ATM1zRLGYYP72J9xwnL1L?si=b43b26e7f4654796',
-                    'https://open.spotify.com/track/2LcXJP95e4HKydTZ2mYfrx?si=82a6d2dc86b541fb',
-                    'https://open.spotify.com/track/7vfCm8tEWV9lCpyY1nvJVB?si=c16dc0c64a6744ef',
-                    'https://open.spotify.com/track/4FeczSomVWVyU4FW7xDeAI?si=750e0440d9bb43d6',
-                    'https://open.spotify.com/track/5RR6Q4yCrbGiRCU5YbpNaY?si=1a6e3a88f529449b',
-                    'https://open.spotify.com/track/3uL1IBFhg52VcQqOwAG01E?si=96bf8a8a3041432e',
-                    'https://open.spotify.com/track/6W6omlQs3mySet0jTC6pvM?si=8a4610adc8f64cd9',
-                    'https://open.spotify.com/track/1J9vyEntJ79CppvgUxJs75?si=26afe79253704bc3',
-                    'https://open.spotify.com/track/2rOnSn2piaqLAlYjtfUBlY?si=1185c81c575044d2',
-                    'https://open.spotify.com/track/3ALndG2kl6LhnAoeAgLKTT?si=9a47744bd0184472',
-                    'https://open.spotify.com/track/395gJWcJQK0C3GJfHAn7f6?si=ed23d528c57243c2',
-                    'https://open.spotify.com/track/4uK0M8AI6gyFmyzUneQpbi?si=32b9bc1a1b594b75',
-                    'https://open.spotify.com/track/4iFPsNzNV7V9KJgcOX7TEO?si=642fee5a523047e5',
+        // Handle token after successful authentication
+        if (window.location.hash.includes("access_token")) {
+            const hash = window.location.hash
+                .substring(1)
+                .split('&')
+                .reduce((initial, item) => {
+                    if (item) {
+                        const parts = item.split('=');
+                        initial[parts[0]] = decodeURIComponent(parts[1]);
+                    }
+                    return initial;
+                }, {});
 
-                    // Add more links as needed
-                ];
-
-                const trackIdsSet = new Set(spotifyLinks.map(link =>
-                    link.split('/track/')[1].split('?')[0]
-                ));
-                const trackIds = Array.from(trackIdsSet); // Convert the Set back to an array
-                this.setState({ trackIds });
-            });
-        } else {
-            // Redirect to the authentication page or component
-            // Adjust this to match your routing setup
-            this.props.navigate('/spotify-auth');
+            const newToken = hash.access_token;
+            console.log("got new token")
+            if (newToken) {
+                const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
+                localStorage.setItem('spotifyToken', newToken);
+                localStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
+                this.setState({ token: newToken }, this.fetchSongs);
+                this.props.navigate('/');
+            }
         }
+
+        // Include your Spotify track links list (spotifyLinks) here
+        const spotifyLinks = [
+            'https://open.spotify.com/track/6ATM1zRLGYYP72J9xwnL1L?si=b43b26e7f4654796',
+            'https://open.spotify.com/track/2LcXJP95e4HKydTZ2mYfrx?si=82a6d2dc86b541fb',
+            'https://open.spotify.com/track/7vfCm8tEWV9lCpyY1nvJVB?si=c16dc0c64a6744ef',
+            'https://open.spotify.com/track/4FeczSomVWVyU4FW7xDeAI?si=750e0440d9bb43d6',
+            'https://open.spotify.com/track/5RR6Q4yCrbGiRCU5YbpNaY?si=1a6e3a88f529449b',
+            'https://open.spotify.com/track/3uL1IBFhg52VcQqOwAG01E?si=96bf8a8a3041432e',
+            'https://open.spotify.com/track/6W6omlQs3mySet0jTC6pvM?si=8a4610adc8f64cd9',
+            'https://open.spotify.com/track/1J9vyEntJ79CppvgUxJs75?si=26afe79253704bc3',
+            'https://open.spotify.com/track/2rOnSn2piaqLAlYjtfUBlY?si=1185c81c575044d2',
+            'https://open.spotify.com/track/3ALndG2kl6LhnAoeAgLKTT?si=9a47744bd0184472',
+            'https://open.spotify.com/track/395gJWcJQK0C3GJfHAn7f6?si=ed23d528c57243c2',
+            'https://open.spotify.com/track/4uK0M8AI6gyFmyzUneQpbi?si=32b9bc1a1b594b75',
+            'https://open.spotify.com/track/4iFPsNzNV7V9KJgcOX7TEO?si=642fee5a523047e5',
+
+            // Add more links as needed
+        ];
+
+        const trackIdsSet = new Set(spotifyLinks.map(link =>
+            link.split('/track/')[1].split('?')[0]
+        ));
+        const trackIds = Array.from(trackIdsSet); // Convert the Set back to an array
+
+        // Set the spotifyLinks in the component state
+        this.setState({ trackIds });
     }
+
+
+
 
     fetchSong = (trackId)=> {
         const { token } = this.state;
@@ -111,17 +138,14 @@ class OurSongs extends Component {
         })
             .then(response => {
                 if (response.status === 401) {
-                    console.log("token expired")
                     // Token expired
                     this.props.navigate('/spotify-auth');
                 } else {
-                    console.log("response json here")
                     return response.json();
                 }
             })
             .then(data => {
                 if (data) {
-                    console.log("song received")
                     this.setState(prevState => ({
                         songs: [...prevState.songs, data]
                     }));
@@ -282,7 +306,7 @@ class OurSongs extends Component {
         };
         return (
             <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
-                <h2 style={headingStyle}>Our Songs ga</h2>
+                <h2 style={headingStyle}>Our Songs</h2>
                 <h2 style={headingStyle2}>This is some of the music you and I share together. Each song has some significance regarding our relationship &#129392;</h2>
                 <div style={lineContainerStyle}>
                     <div style={lineStyle}></div>

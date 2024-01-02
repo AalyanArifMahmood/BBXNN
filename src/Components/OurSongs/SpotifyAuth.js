@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class SpotifyAuth extends Component {
+
     componentDidMount() {
         const hash = window.location.hash
             .substring(1)
@@ -12,8 +13,8 @@ class SpotifyAuth extends Component {
                 }
                 return initial;
             }, {});
-
         const token = hash.access_token;
+        console.log("got new token")
         if (token) {
             const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
             localStorage.setItem('spotifyToken', token);
