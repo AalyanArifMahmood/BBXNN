@@ -119,7 +119,15 @@ class OurSongs extends Component {
             'https://open.spotify.com/track/4uK0M8AI6gyFmyzUneQpbi?si=32b9bc1a1b594b75',
             'https://open.spotify.com/track/4iFPsNzNV7V9KJgcOX7TEO?si=642fee5a523047e5',
             'https://open.spotify.com/track/69vToJ9BMbbLlFZo7k7A7B?si=28ef1e652be94888',
-            'https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC?si=718884886aa44be0'
+            'https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC?si=718884886aa44be0',
+            'https://open.spotify.com/track/2cPUB8EOT6AfJ8oxhyoNXL?si=04c6f9a0ea52467d',
+            'https://open.spotify.com/track/72Z2D7jpKevicRkyL45mbw?si=89724dac7bcc4722',
+            'https://open.spotify.com/track/0qQ4IdhjzNr0gJhdMTf2n3?si=46827be94e194d10',
+            'https://open.spotify.com/track/3yHyiUDJdz02FZ6jfUbsmY?si=9535262327b046a2',
+            'https://open.spotify.com/track/5dq3L78FejIKDrQ9tvI4bv?si=568f86ce684e4806',
+            'https://open.spotify.com/track/0cgwdBXXlPfXJXWf3wMs32?si=fa47061962d54a56',
+            'https://open.spotify.com/track/5FXMRdJjKq1BIX4e8Eg9mK?si=f963431020494531',
+            'https://open.spotify.com/track/4km0RUkMMFdx8iDuq36o2w?si=218bd54708ca4d95'
         ];
 
         const trackIdsSet = new Set(spotifyLinks.map(link =>
