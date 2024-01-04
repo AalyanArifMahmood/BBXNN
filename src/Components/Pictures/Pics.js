@@ -153,12 +153,7 @@ class Pics extends React.Component {
             {
                 title: "Unparalleled Beauty",
                 description: "I made a special request to recreate that one picture of you that I love so damn much, and when I saw the result, I immediately set it as my wallpaper because I was absolutely in awe of how beautiful you are. I know you said you did not like this one that much baby, I am mesmerized by your beauty in this photo. I love you so much, and I will never stop obsessing over you.💜😍🥰",
-                path: process.env.PUBLIC_URL + "/Pics/18.JPG",
-            },
-            {
-                title: "🐻🐭=💜🤍",
-                description: "It is not even up for debate that Bub Bub 🐻 and Nib Nib 🐭 are the cutest couple in the world, and that they are truly made for each other. The love they share is permanent, and forever. It will span the entirety of this lifetime, and every other lifetime after this one. They will always find each other. Bub Bub loves Nib Nib very much!💜🤍",
-                path: process.env.PUBLIC_URL + "/Pics/20.png",
+                path: process.env.PUBLIC_URL + "/Pics/19.JPG",
             },
         ];
 
