@@ -54,9 +54,8 @@ class LettersToYou extends React.Component {
             { title: 'Half a year now, Half a decade some day', path: process.env.PUBLIC_URL+'/PDFs/10.pdf' },
             { title: 'To my Nib Nib', path: process.env.PUBLIC_URL+'/PDFs/11.pdf' },
             { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' },
-            { title: 'New Year, New Adventure', path: process.env.PUBLIC_URL+'/PDFs/13.pdf' }
-
-
+            { title: 'New Year, New Adventure', path: process.env.PUBLIC_URL+'/PDFs/13.pdf' },
+            { title: 'The Sleeping Angel', path: process.env.PUBLIC_URL+'/PDFs/14.pdf' }
         ];
     }
 

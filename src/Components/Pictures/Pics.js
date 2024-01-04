@@ -77,7 +77,7 @@ class Pics extends React.Component {
             },
             {
                 title: "A beautiful kiss",
-                description: "I love this picture with all my heart, because it reminds me just how much i love you, and that despite any hardship or hurdle, we will always overcome it. Your kisses are truly magic, meri jaan!🥰",
+                description: "I love this picture with all my heart, because it reminds me just how much I love you, and that despite any hardship or hurdle, we will always overcome it. Your kisses are truly magic, meri jaan!🥰",
                 path: process.env.PUBLIC_URL + "/Pics/4.png",
             },
             {
@@ -149,6 +149,16 @@ class Pics extends React.Component {
                 title: "'New Years' Kiss",
                 description: "Since we haven't actually gotten to celebrate New Year's together, I have always regarded this as our new Year's kiss. This picture is special to me. It's important. It reminds me of your love, when I am at my lowest. Some day, when we can celebrate New Year's together, I want to recreate this one with you. That, will be the proof, that love overlooked all difficulties and differences. That will be proof, that we made it.💜💜",
                 path: process.env.PUBLIC_URL + "/Pics/18.JPG",
+            },
+            {
+                title: "Unparalleled Beauty",
+                description: "I made a special request to recreate that one picture of you that I love so damn much, and when I saw the result, I immediately set it as my wallpaper because I was absolutely in awe of how beautiful you are. I know you said you did not like this one that much baby, I am mesmerized by your beauty in this photo. I love you so much, and I will never stop obsessing over you.💜😍🥰",
+                path: process.env.PUBLIC_URL + "/Pics/18.JPG",
+            },
+            {
+                title: "🐻🐭=💜🤍",
+                description: "It is not even up for debate that Bub Bub 🐻 and Nib Nib 🐭 are the cutest couple in the world, and that they are truly made for each other. The love they share is permanent, and forever. It will span the entirety of this lifetime, and every other lifetime after this one. They will always find each other. Bub Bub loves Nib Nib very much!💜🤍",
+                path: process.env.PUBLIC_URL + "/Pics/20.png",
             },
         ];
 
