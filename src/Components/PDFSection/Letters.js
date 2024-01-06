@@ -55,7 +55,8 @@ class LettersToYou extends React.Component {
             { title: 'To my Nib Nib', path: process.env.PUBLIC_URL+'/PDFs/11.pdf' },
             { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' },
             { title: 'New Year, New Adventure', path: process.env.PUBLIC_URL+'/PDFs/13.pdf' },
-            { title: 'The Sleeping Angel', path: process.env.PUBLIC_URL+'/PDFs/14.pdf' }
+            { title: 'The Sleeping Angel', path: process.env.PUBLIC_URL+'/PDFs/14.pdf' },
+            { title: 'The honour is mine', path: process.env.PUBLIC_URL+'/PDFs/15.pdf' }
         ];
     }
 
