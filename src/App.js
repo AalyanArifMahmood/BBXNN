@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter as Router, Routes, Route, Navigate, useNavigate} from 'react-router-dom';
 import './App.css';
 import Heading from "./Components/Heading/Heading";
@@ -14,7 +14,6 @@ function RedirectIfNotAuthenticated() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("Iy hit this part")
         const token = sessionStorage.getItem('spotifyToken');
         const expiryTime = sessionStorage.getItem('spotifyTokenExpiry');
         const isTokenValid = token && new Date().getTime() < parseInt(expiryTime);
@@ -25,11 +24,26 @@ function RedirectIfNotAuthenticated() {
         }
     }, [navigate]);
 
-    // Return null because this component does not render anything
     return null;
 }
 
 function App() {
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    useEffect(() => {
+
+        if (window.location.hash) {
+            window.location.href = '/';
+        }
+
+        if (isPopupOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'initial';
+        }
+    }, [isPopupOpen]);
+
+
     return (
         <Router>
             <RedirectIfNotAuthenticated />
@@ -37,12 +51,12 @@ function App() {
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
                     <>
-                        <Navbar/>
+                        {!isPopupOpen && <Navbar/>}
                         <Heading />
                         <OurStory />
-                        <Pics />
-                        <Letters />
-                        <OurSongsWrapper />
+                        <Pics isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
+                        <Letters isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
+                        <OurSongsWrapper isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen} />
                     </>
                 } />
                 <Route path="*" element={<Navigate to="/" replace />} />

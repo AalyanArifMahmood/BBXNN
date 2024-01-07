@@ -49,11 +49,13 @@ class Pics extends React.Component {
     openPopup = (pic) => {
         document.body.style.overflow = 'hidden';
         this.setState({ selectedPic: pic });
+        this.props.setPopupOpen(true);
     };
 
     closePopup = () => {
         document.body.style.overflow = 'initial';
         this.setState({ selectedPic: null });
+        this.props.setPopupOpen(false);
     };
 
 

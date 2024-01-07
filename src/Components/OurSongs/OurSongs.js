@@ -41,11 +41,13 @@ class OurSongs extends Component {
     openPopup = (song) => {
         document.body.style.overflow = 'hidden';
         this.setState({ selectedSong: song });
+        this.props.setPopupOpen(true);
     };
 
     closePopup = () => {
         document.body.style.overflow = 'initial';
         this.setState({ selectedSong: null });
+        this.props.setPopupOpen(false);
     };
 
 
@@ -247,7 +249,8 @@ class OurSongs extends Component {
             width: "100%",
             height: "100%",
             background: "rgba(0, 0, 0, 0.5)",
-            zIndex: 1001
+            zIndex: 1001,
+
         };
 
         const popupContentStyle = {

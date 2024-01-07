@@ -29,6 +29,7 @@ class Navbar extends React.Component {
 
     render() {
         const { matches } = this.state;
+        const { isPopupOpen } = this.props;
         const navbarStyle = {
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
             background: 'linear-gradient(to right, white, #d3d3d3)',
@@ -36,7 +37,7 @@ class Navbar extends React.Component {
         };
 
         return (
-            <nav className={`desktop-navigation ${this.state.showNavbar ? 'visible' : ''}`} style={navbarStyle}>
+            <nav className={`desktop-navigation ${this.state.showNavbar ? 'visible' : ''} ${isPopupOpen ? 'disable-clicks' : ''}`} style={navbarStyle}>
                 <div>
                     {matches ? (<h2>&nbsp; Bub Bub x Nib Nib </h2>) : (<h2>Bub Bub x Nib Nib</h2>)}
                 </div>

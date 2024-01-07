@@ -73,10 +73,12 @@ class LettersToYou extends React.Component {
 
     openPdf = (pdfPath, pdfTitle) => {
         this.setState({ selectedPdf: pdfPath, selectedPdfTitle: pdfTitle });
+        this.props.setPopupOpen(true);
     };
 
     closePopup = () => {
         this.setState({ selectedPdf: null });
+        this.props.setPopupOpen(false);
     };
 
     onDocumentLoadSuccess = ({ numPages }) => {
