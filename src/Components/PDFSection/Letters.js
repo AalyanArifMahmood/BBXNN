@@ -56,7 +56,8 @@ class LettersToYou extends React.Component {
             { title: 'The missing piece', path: process.env.PUBLIC_URL+'/PDFs/12.pdf' },
             { title: 'New Year, New Adventure', path: process.env.PUBLIC_URL+'/PDFs/13.pdf' },
             { title: 'The Sleeping Angel', path: process.env.PUBLIC_URL+'/PDFs/14.pdf' },
-            { title: 'The honour is mine', path: process.env.PUBLIC_URL+'/PDFs/15.pdf' }
+            { title: 'The honour is mine', path: process.env.PUBLIC_URL+'/PDFs/15.pdf' },
+            { title: 'New Year, same old nerd', path: process.env.PUBLIC_URL+'/PDFs/16.pdf' }
         ];
     }
 
@@ -243,7 +244,7 @@ class LettersToYou extends React.Component {
                         <div key={index} onClick={() => this.openPdf(pdf.path, pdf.title)} style={thumbnailContainerStyle}>
                             <div style={pdfStyle}>
                                 <Document file={pdf.path} loading="">
-                                    <Page pageNumber={1} width={150} renderTextLayer={false} />
+                                    <Page size="A4" pageNumber={1} width={150} renderTextLayer={false} />
                                 </Document>
                             </div>
                             <b style={thumbnailTextStyle}>{pdf.title}</b>
@@ -267,6 +268,7 @@ class LettersToYou extends React.Component {
                                 {Array.from(new Array(this.state.numPages), (el, index) => (
                                     <div key={index} style={pageStyle}>
                                         <Page
+                                            size="A3"
                                             pageNumber={index + 1}
                                             width={window.innerWidth <= 768 ? 300 : window.innerWidth * 0.5}
                                             renderTextLayer={false}
