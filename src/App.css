@@ -98,6 +98,40 @@ audio::-moz-range-progress { /* Progress bar */
   background-color: green;
 }
 
+/* MyCalendarStyles.css */
+
+/* Override calendar background */
+.react-big-calendar .rbc-calendar {
+  background-color: white;
+  color: white;
+}
+
+/* Highlight today's date */
+.rbc-today {
+  background-color: #e6e6e6; /* Light gray background for today */
+}
+
+/* Event style */
+.rbc-event {
+  white-space: normal; /* Wrap text */
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Ellipsis for overflow text */
+  font-size: 0.8em; /* Adjust font size */
+}
 
 
+.popup-content::before {
+  content: '';
+  position: absolute;
+  top: 10px; left: 10px;
+  right: 10px; bottom: 10px;
+  border: 2px solid #4F42B5; /* Color of the fancy border */
+  border-radius: 10px; /* Adjust as needed */
+  pointer-events: none; /* Ensures clicks go through to the actual content */
+  z-index: -1; /* Ensures it does not overlap the content */
+}
 
+.popup-content {
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  /* ... other styles ... */
+}

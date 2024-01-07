@@ -42,13 +42,13 @@ class Navbar extends React.Component {
                     {matches ? (<h2>&nbsp; Bub Bub x Nib Nib </h2>) : (<h2>Bub Bub x Nib Nib</h2>)}
                 </div>
                 <Scrollspy
-                    items={['heading','ourstory', 'memories', 'letters', 'oursongs']}
+                    items={['ourstory', 'memories', 'letters', 'oursongs', 'calendar']}
                     currentClassName="active">
-                    <li><a href="#heading">Home</a></li>
                     <li><a href="#ourstory">Story</a></li>
                     <li><a href="#memories">Memories</a></li>
                     <li><a href="#letters">Letters</a></li>
                     <li><a href="#oursongs">Songs</a></li>
+                    <li><a href="#calendar">Calendar</a></li>
                 </Scrollspy>
             </nav>
         );

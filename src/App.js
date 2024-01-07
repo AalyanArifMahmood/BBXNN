@@ -8,6 +8,8 @@ import Pics from "./Components/Pictures/Pics";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
 import Navbar from "./Components/Navbar/Navbar";
+import Calendar from "./Components/Calendar/Calendar";
+
 
 function RedirectIfNotAuthenticated() {
     const navigate = useNavigate();
@@ -52,6 +54,7 @@ function App() {
                         <Pics isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
                         <Letters isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
                         <OurSongsWrapper isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen} />
+                        <Calendar isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
                     </>
                 } />
                 <Route path="*" element={<Navigate to="/" replace />} />

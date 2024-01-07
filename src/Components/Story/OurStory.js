@@ -1,8 +1,8 @@
 import React from 'react';
 
 class OurStory extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             matches: window.matchMedia("(min-width: 680px)").matches,
             isVisible: false,
@@ -19,12 +19,17 @@ class OurStory extends React.Component {
     }
 
     calculateMonthsInWords() {
-        const start_date = new Date(2022, 10, 29); // Month is 0-indexed in JavaScript Date
-        const current_date = new Date();
-        const difference_in_months = (current_date.getFullYear() - start_date.getFullYear()) * 12 + current_date.getMonth() - start_date.getMonth();
+        const startDate = new Date(2022, 10, 8); // Start date: November 29, 2022
+        const currentDate = new Date();
+        let differenceInMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
 
-        return this.numberToWords(difference_in_months);
+        if (currentDate.getDate() < startDate.getDate()) {
+            differenceInMonths--;
+        }
+
+        return this.numberToWords(differenceInMonths);
     }
+
 
     numberToWords(num) {
         const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
