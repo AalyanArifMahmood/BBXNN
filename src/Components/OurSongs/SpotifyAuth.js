@@ -37,7 +37,7 @@ class SpotifyAuth extends Component {
 
     render() {
         return (
-            <div>Loading...</div> // Or any other loading state
+            <div>Loading...</div>
         );
     }
 }

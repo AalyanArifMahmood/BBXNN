@@ -55,6 +55,7 @@ function App() {
                         <Letters isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
                         <OurSongsWrapper isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen} />
                         <Calendar isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
+                        <BackToTopButton />
                     </>
                 } />
                 <Route path="*" element={<Navigate to="/" replace />} />
@@ -62,5 +63,66 @@ function App() {
         </Router>
     );
 }
+
+function BackToTopButton() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Show button when page is scrolled upto given distance
+    const toggleVisibility = () => {
+        if (window.pageYOffset > 300) {
+            setIsVisible(true);
+        } else {
+            setIsVisible(false);
+        }
+    };
+
+    // Set the top coordinate to 0
+    // Make scrolling smooth
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", toggleVisibility);
+
+        return () => {
+            window.removeEventListener("scroll", toggleVisibility);
+        };
+    }, []);
+
+    return (
+        isVisible && (
+            <div onClick={scrollToTop} style={backToTopStyle} title="Back to top">
+                &#x21e7;
+            </div>
+        )
+    );
+}
+
+const backToTopStyle = {
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    color: 'black',
+    borderRadius: '50%',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '10px',
+    fontSize: '25px',
+    zIndex: 1000,
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.3)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '40px',
+    height: '40px',
+    lineHeight: '40px',
+};
+
+
 
 export default App;
