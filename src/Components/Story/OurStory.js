@@ -93,7 +93,7 @@ class OurStory extends React.Component {
         };
 
         return (
-            <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
+            <div id={"ourstory"} style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
             <div style={containerStyle}>
                 {this.state.matches && (
                     <img src={process.env.PUBLIC_URL + "/StoryPic.png"} alt="Our Story" style={imageStyle} />

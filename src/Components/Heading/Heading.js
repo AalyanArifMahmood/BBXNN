@@ -64,7 +64,7 @@ class Heading extends React.Component {
 
     render() {
         return (
-            <div className={this.state.isVisible ? 'fade-in' : 'hidden'} style={headingContainerStyle}>
+            <div id={"heading"}  className={this.state.isVisible ? 'fade-in' : 'hidden'} style={headingContainerStyle}>
                     <img src={process.env.PUBLIC_URL + "/Bub.png"} alt="Bub" style={{ maxWidth: '100px', margin: '0 20px' }} /> {/* Adjust size and path */}
                     <div>
                         <div style={{ ...lineContainerStyle, top: '20px' }}>

@@ -292,7 +292,7 @@ class Pics extends React.Component {
         };
 
         return (
-            <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
+            <div id={"memories"} style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
                 <h2 style={headingStyle}>Memories</h2>
                 <h2 style={headingStyle2}>We have made a lot of memories together. Here are some of the sweetest ones! &#128525;</h2>
                 <div style={lineContainerStyle}>

@@ -229,7 +229,7 @@ class LettersToYou extends React.Component {
         const isPhoneScreen = window.innerWidth <= 768;
         const finalPopupStyle = isPhoneScreen ? phonePopupStyle : popupStyle;
         return (
-            <div style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
+            <div id={"letters"} style={componentContainerStyle} className={this.state.isVisible ? 'fade-in' : 'hidden'}>
                 <h2 style={headingStyle}>Letters To You</h2>
                 <h2 style={headingStyle2}>This is a collection of all the letters I have written to you. I filled all of them with love, all the love I have for you &#128525;</h2>
                 <div style={lineContainerStyle}>

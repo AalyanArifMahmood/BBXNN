@@ -8,6 +8,7 @@ import Letters from "./Components/PDFSection/Letters";
 import Pics from "./Components/Pictures/Pics";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
+import Navbar from "./Components/Navbar/Navbar";
 
 function RedirectIfNotAuthenticated() {
     const navigate = useNavigate();
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/spotify-auth" element={<SpotifyAuthWrapper />} />
                 <Route path="/" element={
                     <>
+                        <Navbar/>
                         <Heading />
                         <OurStory />
                         <Pics />
