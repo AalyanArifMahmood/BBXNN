@@ -55,7 +55,7 @@ function App() {
                         <Letters isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
                         <OurSongsWrapper isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen} />
                         <Calendar isPopupOpen={isPopupOpen} setPopupOpen={setIsPopupOpen}/>
-                        <BackToTopButton />
+                        {!isPopupOpen && <BackToTopButton/>}
                     </>
                 } />
                 <Route path="*" element={<Navigate to="/" replace />} />
