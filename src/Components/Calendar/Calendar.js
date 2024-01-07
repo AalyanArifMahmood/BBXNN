@@ -53,11 +53,13 @@ class MyCalendar extends Component {
     }
 
     onSelectEvent = (event) => {
+        document.body.style.overflow = 'hidden';
         this.setState({ selectedEvent: event });
         this.props.setPopupOpen(true);
     }
 
     closePopup = () => {
+        document.body.style.overflow = 'initial';
         this.setState({ selectedEvent: null });
         this.props.setPopupOpen(false);
     }
@@ -217,7 +219,8 @@ class MyCalendar extends Component {
 
 
         const componentContainerStyle = {
-            background: 'linear-gradient(to right, #32CD32, #006400)',
+            backgroundColor: '#0072C6',
+            background: 'linear-gradient(to right, #3399DC, #0072C6)',
             padding: '20px',
             paddingBottom: "5%",
             borderRadius: '8px',
