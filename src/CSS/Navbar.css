@@ -135,11 +135,11 @@ ul {
     }
 
     .desktop-navigation > ul > li {
-        margin: 5px;
+        margin: 2px;
     }
 
     .desktop-navigation > ul > li > a {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 }
