@@ -215,21 +215,6 @@ class MyCalendar extends Component {
             right: "15px",
         };
 
-        const closeButtonStyle = {
-            right: 'initial',
-            cursor: 'pointer',
-            fontSize: '24px',
-            fontWeight: 'bold',
-            color: '#333',
-            zIndex: 1002,
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderRadius: '50%',
-            padding: '5px',
-            left: '5px',
-            position: 'sticky',
-            top: '10px',
-        };
-
 
         const componentContainerStyle = {
             background: 'linear-gradient(to right, #32CD32, #006400)',
@@ -282,7 +267,6 @@ class MyCalendar extends Component {
                 {this.state.selectedEvent && (
                     <div style={popupStyle} onClick={this.closePopup}>
                         <div style={finalPopupStyle} onClick={(e) => e.stopPropagation()} className="popup-content">
-                            {/* Popup content */}
                             <span style={closePopupStyle} onClick={this.closePopup}>&times;</span>
                             <h2 style={{fontWeight: "bold"}}>Bub Bub and Nib Nib present</h2>
                             <h2>{selectedEvent.title}</h2>
