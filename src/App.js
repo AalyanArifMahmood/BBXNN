@@ -4,7 +4,6 @@ import './App.css';
 import Heading from "./Components/Heading/Heading";
 import OurStory from "./Components/Story/OurStory";
 import Letters from "./Components/PDFSection/Letters";
-// import Footer from "./Components/Footer";
 import Pics from "./Components/Pictures/Pics";
 import OurSongsWrapper from "./Components/OurSongs/OurSongsWrapper";
 import SpotifyAuthWrapper from "./Components/OurSongs/SpotifyAuthWrapper";
@@ -31,10 +30,6 @@ function App() {
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     useEffect(() => {
-
-        if (window.location.hash) {
-            window.location.href = '/';
-        }
 
         if (isPopupOpen) {
             document.body.style.overflow = 'hidden';
