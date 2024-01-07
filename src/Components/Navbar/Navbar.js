@@ -28,7 +28,7 @@ class Navbar extends React.Component {
     }
 
     render() {
-        const { matches, showNavbar } = this.state;
+        const { matches } = this.state;
         const navbarStyle = {
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
             background: 'linear-gradient(to right, white, #d3d3d3)',
