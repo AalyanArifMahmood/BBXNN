@@ -27,9 +27,9 @@ class OurSongs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            token: null, // State to hold the access token
-            trackIds: [], // State to hold track IDs
-            songs: [], // State to hold song details,
+            token: null,
+            trackIds: [],
+            songs: [],
             isPhoneScreen: window.matchMedia("(max-width: 680px)").matches,
             selectedSong: null,
             isVisible: false,
@@ -97,7 +97,7 @@ class OurSongs extends Component {
             const newToken = hash.access_token;
             console.log("got new token")
             if (newToken) {
-                const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
+                const expiryTime = new Date().getTime() + 3600 * 1000;
                 sessionStorage.setItem('spotifyToken', newToken);
                 sessionStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
                 this.setState({ token: newToken }, this.fetchSongs);
@@ -105,7 +105,6 @@ class OurSongs extends Component {
             }
         }
 
-        // Include your Spotify track links list (spotifyLinks) here
         const spotifyLinks = [
             'https://open.spotify.com/track/6ATM1zRLGYYP72J9xwnL1L?si=b43b26e7f4654796',
             'https://open.spotify.com/track/2LcXJP95e4HKydTZ2mYfrx?si=82a6d2dc86b541fb',
@@ -135,9 +134,8 @@ class OurSongs extends Component {
         const trackIdsSet = new Set(spotifyLinks.map(link =>
             link.split('/track/')[1].split('?')[0]
         ));
-        const trackIds = Array.from(trackIdsSet); // Convert the Set back to an array
+        const trackIds = Array.from(trackIdsSet);
 
-        // Set the spotifyLinks in the component state
         this.setState({ trackIds });
     }
 
@@ -312,7 +310,7 @@ class OurSongs extends Component {
         };
 
         const componentContainerStyle = {
-            background: 'linear-gradient(to right, #191414, #323232)', // Gradient from #191414 to a slightly lighter shade
+            background: 'linear-gradient(to right, #191414, #323232)',
             padding: '20px',
             paddingBottom: "5%",
             borderRadius: '8px',

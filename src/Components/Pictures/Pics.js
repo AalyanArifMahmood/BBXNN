@@ -274,7 +274,7 @@ class Pics extends React.Component {
         };
 
         const componentContainerStyle = {
-            background: 'linear-gradient(to right, #e5e5db, #d2b48c)', // Gradient from light beige to tan
+            background: 'linear-gradient(to right, #e5e5db, #d2b48c)',
             padding: '20px',
             borderRadius: '8px',
             margin: '20px 0',

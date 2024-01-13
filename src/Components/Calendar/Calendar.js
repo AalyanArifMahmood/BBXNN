@@ -109,8 +109,8 @@ class MyCalendar extends Component {
 
             for (let m = 0; m < 12; m++) {
                 if (m !== 10) { // Skip November
-                    let monthDiff = (new Date(y, m) - startDate) / (1000 * 60 * 60 * 24 * 30); // Approximate month difference
-                    let ordinalMonth = Math.round(monthDiff) + 1; // Adding 1 to account for the skipped month
+                    let monthDiff = (new Date(y, m) - startDate) / (1000 * 60 * 60 * 24 * 30);
+                    let ordinalMonth = Math.round(monthDiff) + 1;
                     let day = (m === 1 && !this.isLeapYear(y)) ? 28 : 29;
 
                     events.push({
@@ -175,10 +175,10 @@ class MyCalendar extends Component {
         };
 
         const popupContentStyle = {
-            backgroundColor: '#fdfdfd', // Soft white background
-            border: '2px solid #4F42B5', // Stylish border color
-            borderRadius: '15px', // Rounded corners
-            boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)', // Subtle shadow
+            backgroundColor: '#fdfdfd',
+            border: '2px solid #4F42B5',
+            borderRadius: '15px',
+            boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)',
             zIndex: 1002,
             position: 'fixed',
             top: '50%',
@@ -234,10 +234,10 @@ class MyCalendar extends Component {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: "20px", // Adjusted padding
-            margin: "50px auto", // Simplified margin
-            width: isPhoneScreen ?  '90%' : '70%', // Adjust width as needed
-            maxWidth: '100%', // Ensure it doesn't exceed screen width
+            padding: "20px",
+            margin: "50px auto",
+            width: isPhoneScreen ?  '90%' : '70%',
+            maxWidth: '100%',
             border: "1px solid #ccc",
             borderRadius: "8px",
             backgroundColor: "#FFFFFF",

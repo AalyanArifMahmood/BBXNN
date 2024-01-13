@@ -67,7 +67,6 @@ function App() {
 function BackToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Show button when page is scrolled upto given distance
     const toggleVisibility = () => {
         if (window.pageYOffset > 300) {
             setIsVisible(true);
@@ -76,8 +75,6 @@ function BackToTopButton() {
         }
     };
 
-    // Set the top coordinate to 0
-    // Make scrolling smooth
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,

@@ -15,7 +15,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
-    /* Other styles as needed */
 }
 
 .song-image {
@@ -28,5 +27,4 @@
     margin-top: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* Other styles as needed */
 }

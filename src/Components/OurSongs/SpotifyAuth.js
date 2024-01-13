@@ -16,7 +16,7 @@ class SpotifyAuth extends Component {
         const token = hash.access_token;
         console.log("got new token")
         if (token) {
-            const expiryTime = new Date().getTime() + 3600 * 1000; // 1 hour from now
+            const expiryTime = new Date().getTime() + 3600 * 1000;
             sessionStorage.setItem('spotifyToken', token);
             sessionStorage.setItem('spotifyTokenExpiry', expiryTime.toString());
             this.props.navigate('/');

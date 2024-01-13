@@ -38,18 +38,17 @@
 }
 
 body {
-  background-color: #FFFFFF; /* Light cream/off-white color */
-  color: #333333; /* Dark gray for the main text */
+  background-color: #FFFFFF;
+  color: #333333;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif; /* Default font */
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  color: #333333; /* Dark gray for headings */
-  /* additional styling as needed */
+  color: #333333;
 }
 
 
@@ -68,7 +67,7 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 
 audio::-webkit-media-controls-timeline {
-  background-color: #333333; /* Default background color */
+  background-color: #333333;
 }
 
 audio::-webkit-media-controls-timeline-container {
@@ -80,43 +79,37 @@ audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-volume-slider,
 audio::-webkit-media-controls-fullscreen-button,
 audio::-webkit-media-controls-playback-rate-button,
-audio::-webkit-media-controls-download-button, /* If such a pseudo-element exists */
-audio::-webkit-media-controls-menu-button { /* Targeting the options/menu button */
-  filter: invert(1); /* Attempt to make buttons white */
+audio::-webkit-media-controls-download-button,
+audio::-webkit-media-controls-menu-button {
+  filter: invert(1);
 }
 
-audio::-webkit-media-controls-played { /* Progress bar */
+audio::-webkit-media-controls-played {
   background-color: green;
 }
 
-/* Firefox */
-audio::-moz-range-track { /* Full track */
+audio::-moz-range-track {
   background-color: #333333;
 }
 
-audio::-moz-range-progress { /* Progress bar */
+audio::-moz-range-progress {
   background-color: green;
 }
 
-/* MyCalendarStyles.css */
-
-/* Override calendar background */
 .react-big-calendar .rbc-calendar {
   background-color: white;
   color: white;
 }
 
-/* Highlight today's date */
 .rbc-today {
-  background-color: #e6e6e6; /* Light gray background for today */
+  background-color: #e6e6e6;
 }
 
-/* Event style */
 .rbc-event {
-  white-space: normal; /* Wrap text */
-  overflow: hidden; /* Hide overflow text */
-  text-overflow: ellipsis; /* Ellipsis for overflow text */
-  font-size: 0.8em; /* Adjust font size */
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8em;
 }
 
 
@@ -125,13 +118,12 @@ audio::-moz-range-progress { /* Progress bar */
   position: absolute;
   top: 10px; left: 10px;
   right: 10px; bottom: 10px;
-  border: 2px solid #4F42B5; /* Color of the fancy border */
-  border-radius: 10px; /* Adjust as needed */
-  pointer-events: none; /* Ensures clicks go through to the actual content */
-  z-index: -1; /* Ensures it does not overlap the content */
+  border: 2px solid #4F42B5;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .popup-content {
-  position: relative; /* Needed for absolute positioning of the pseudo-element */
-  /* ... other styles ... */
+  position: relative;
 }

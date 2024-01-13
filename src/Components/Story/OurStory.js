@@ -19,7 +19,7 @@ class OurStory extends React.Component {
     }
 
     calculateMonthsInWords() {
-        const startDate = new Date(2022, 10, 8); // Start date: November 29, 2022
+        const startDate = new Date(2022, 10, 8);
         const currentDate = new Date();
         let differenceInMonths = (currentDate.getFullYear() - startDate.getFullYear()) * 12 + currentDate.getMonth() - startDate.getMonth();
 
